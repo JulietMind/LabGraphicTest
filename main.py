@@ -5,20 +5,21 @@ from tkinter import *
 
 
 
-# Funciones
+# Functions
 # def funcion():
 # 	print("OH SI! Me Gusta!")
 
 
-# Definir variables
+# Def variables
 raiz = Tk()
 etiqueta = Label(raiz, text="Hola mundo!")
 boton = Button(raiz, text="Pulsame!")
 
 
-# Ejecuciones
+# Executions
+
 raiz.title("JulietMind")
 etiqueta.pack()
-raiz.mainloop()
-
 boton.pack()
+# mainloop() has to go at the end or the Executions doesn't work
+raiz.mainloop()
