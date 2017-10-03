@@ -3,23 +3,25 @@ import sys
 from tkinter import *
 
 
+app = Tk()
+app.title("JulietMind")
+
+# VP -> ventana principal
+vp = Frame(app)
+vp.grid()
+vp.grid(column=0, row=0, padx=(50,50), pady=(10,10))
+vp.columnconfigure(0, weight=1)
+vp.rowconfigure(0,weight=1)
 
 
-# Functions
-# def funcion():
-# 	print("OH SI! Me Gusta!")
+etiqueta = Label(vp,text="Escribe algo:")
+etiqueta.grid(column=2,row=2)
 
+boton = Button(vp,text="Aceptar")
+boton.grid(column=1,row=1)
 
-# Def variables
-raiz = Tk()
-etiqueta = Label(raiz, text="Hola mundo!")
-boton = Button(raiz, text="Pulsame!")
+valor = ""
+entrada_txt = Entry(vp, width=10, textvariable=valor)
+entrada_txt.grid(column=2,row=1)
 
-
-# Executions
-
-raiz.title("JulietMind")
-etiqueta.pack()
-boton.pack()
-# mainloop() has to go at the end or the Executions doesn't work
-raiz.mainloop()
+app.mainloop()
