@@ -2,7 +2,7 @@
 import sys
 from tkinter import *
 
-# Cambia el valor de la variable "valor"
+# Cambia el valor de la variable "valor" al hacer click en el boton
 def click():
 	_valor = entrada_txt.get()
 	etiqueta.config(text=_valor)
