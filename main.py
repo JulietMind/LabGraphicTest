@@ -2,6 +2,11 @@
 import sys
 from tkinter import *
 
+# Cambia el valor de la variable "valor"
+def click():
+	_valor = entrada_txt.get()
+	etiqueta.config(text=_valor)
+
 
 app = Tk()
 app.title("JulietMind")
@@ -17,7 +22,7 @@ vp.rowconfigure(0,weight=1)
 etiqueta = Label(vp,text="Escribe algo:")
 etiqueta.grid(column=2,row=2)
 
-boton = Button(vp,text="Aceptar")
+boton = Button(vp,text="Aceptar", command=click)
 boton.grid(column=1,row=1)
 
 valor = ""
